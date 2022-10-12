@@ -10,16 +10,19 @@ import (
 )
 
 func main() {
-	scanner := bufio.NewScanner(os.Stdin)
-	fmt.Print("Enter domain to check: ")
+	for {
+		scanner := bufio.NewScanner(os.Stdin)
+		fmt.Print("Enter domain to check: ")
 
-	for scanner.Scan() {
-		checkDomain(scanner.Text())
+		for scanner.Scan() {
+			checkDomain(scanner.Text())
+		}
+
+		if err := scanner.Err(); err != nil {
+			log.Fatalf("Error: could not read from input: %v\n", err)
+		}
 	}
 
-	if err := scanner.Err(); err != nil {
-		log.Fatalf("Error: could not read from input: %v\n", err)
-	}
 }
 
 func checkDomain(domain string) {
