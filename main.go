@@ -10,7 +10,8 @@ import (
 )
 
 func main() {
-	for {
+
+	for true {
 		scanner := bufio.NewScanner(os.Stdin)
 		fmt.Print("Enter domain to check: ")
 
@@ -64,4 +65,5 @@ func checkDomain(domain string) {
 	}
 	fmt.Println("domain, hasMX, hasSPF, spfRecord, hasDMARC, dmarcRecord")
 	fmt.Printf("%v, %v, %v, %v, %v, %v\n", domain, hasMx, hasSPF, spfRecord, hasDMARC, dmarcRecord)
+	fmt.Println()
 }
