@@ -41,7 +41,7 @@ func checkDomain(domain string) {
 		log.Printf("Error: %v\n", err)
 	}
 	for _, record := range txtRecords {
-		if strings.HasPrefix(record, "vspf1") {
+		if strings.HasPrefix(record, "v=spf1") {
 			hasSPF = true
 			spfRecord = record
 			break
