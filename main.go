@@ -1,27 +1,27 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
 	"log"
 	"net"
-	"os"
 	"strings"
 )
 
 func main() {
 
 	for true {
+		var domain string
 		fmt.Print("Enter domain to check: ")
-		scanner := bufio.NewScanner(os.Stdin)
-
-		for scanner.Scan() {
-			checkDomain(scanner.Text())
-		}
-
-		if err := scanner.Err(); err != nil {
+		_, err := fmt.Scan(&domain)
+		if err != nil {
 			log.Fatalf("Error: could not read from input: %v\n", err)
 		}
+		//scanner := bufio.NewScanner(os.Stdin)
+
+		//for scanner.Scan() {
+		checkDomain(domain)
+		//}
+
 	}
 
 }
