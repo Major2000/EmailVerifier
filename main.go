@@ -12,8 +12,8 @@ import (
 func main() {
 
 	for true {
-		scanner := bufio.NewScanner(os.Stdin)
 		fmt.Print("Enter domain to check: ")
+		scanner := bufio.NewScanner(os.Stdin)
 
 		for scanner.Scan() {
 			checkDomain(scanner.Text())
