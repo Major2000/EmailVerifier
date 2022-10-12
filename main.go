@@ -60,5 +60,5 @@ func checkDomain(domain string) {
 		}
 	}
 
-	fmt.Printf("%", domain, hasMx, hasSPF, hasSPF, spfRecord, hasDMARC, dmarcRecord)
+	fmt.Printf("%v, %v, %v, %v, %v, %v", domain, hasMx, hasSPF, spfRecord, hasDMARC, dmarcRecord)
 }
