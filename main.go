@@ -11,7 +11,7 @@ import (
 
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
-	fmt.Println("domain,hasMX,hasSPF,spfRecord,hasDMARC,dmarcReord")
+	fmt.Println("domain,hasMX,hasSPF,spfRecord,hasDMARC,dmarcRecord")
 
 	for scanner.Scan() {
 		checkDomain(scanner.Text())
